@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cloud_service_height"
+            android:text="@string/user_info_more" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/exist_account" />
+
+        <TextView
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/exit_account_height"
+            android:layout_marginTop="@dimen/exit_account_margin_top"
+            android:background="@drawable/no_account"
+            android:gravity="center"
+            android:text="@string/exit"
+            android:textSize="@dimen/exit_account_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

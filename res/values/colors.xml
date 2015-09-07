@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="auth_password_text_color">#949494</color>
+
+    <drawable name="view_color">#949494</drawable>
+
+    <color name="find_password_text_color">#949494</color>
+    <color name="account_info_color">#949494</color>
+    <color name="sync_data_text_color">#949494</color>
+
+</resources>

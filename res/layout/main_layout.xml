@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/account_margin"
+        android:background="@drawable/exist_account"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/my_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/account_height"
+            android:layout_weight="6"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/my_img"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/my_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="@dimen/add_text_size" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_height"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/account_height"
+            android:layout_weight="6"
+            android:background="@drawable/exist_account"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_exchange_selected" />
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/add_account"
+                android:textSize="@dimen/add_text_size" />
+        </LinearLayout>
+         <TextView
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/exist_account"
+            android:gravity="center"
+            android:text="@string/start" />
+    </LinearLayout>
+
+</LinearLayout>

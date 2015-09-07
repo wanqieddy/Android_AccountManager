@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.phicomm.account"
+    android:versionCode="1"
+    android:versionName="1.1.1.0(normal)" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_exchange_selected"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name=".main.AuthenticationService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".service.PoCInitSyncRequestService"
+            android:exported="false" />
+        <service
+            android:name=".service.PoCInitContactRequestService"
+            android:exported="false" />
+        <service
+            android:name=".service.PoCRequestService"
+            android:exported="false" />
+        <service
+            android:name=".service.PoCInitUploadRequestService"
+            android:exported="false" />
+        <service
+            android:name=".service.PoCInitCheckRequestService"
+            android:exported="false" />
+        <service
+            android:name=".service.PoCInitMapRequestService"
+            android:exported="false" />
+        <activity android:name=".main.LoginActivity" >
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.AuthenticatorActivity"
+            android:label="@string/login_account" >
+        </activity>
+        <activity android:name=".register.RegWebView" >
+        </activity>
+        <activity android:name=".register.FindPwdWebView" >
+        </activity>
+        <activity android:name=".main.UserInfoActivity" />
+        <activity android:name=".main.InfoMoreActivity" />
+        <activity android:name=".main.CloudActivity" />
+
+        <provider
+            android:name=".provider.PersonProvider"
+            android:authorities="com.phicomm.account" />
+        <provider
+            android:name=".provider.CheckDataProvider"
+            android:authorities="com.phicomm.check" />
+        <provider
+            android:name=".provider.UploadDataProvider"
+            android:authorities="com.phicomm.upload" />
+        <provider
+            android:name=".provider.SyncProvider"
+            android:authorities="com.phicomm.synchronicity" />
+        <provider
+            android:name=".provider.MapProvider"
+            android:authorities="com.phicomm.mapping" />
+    </application>
+
+</manifest>

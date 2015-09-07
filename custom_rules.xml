@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AccountManager_custom" default="help">
+    <property name="apt_generated.dir" value="${basedir}/.apt_generated/" />
+    <property name="apt_generated.dir" value="${basedir}/.apt_generated/" />
+    <property name="apt_generated.dir" value="${basedir}/.apt_generated/" />
+    <property name="apt_generated.dir" value="${basedir}/.apt_generated/" />
+
+    <target name="-pre-clean">
+      <delete dir="${apt_generated.dir}" verbose="${verbose}" />
+      <mkdir dir="${apt_generated.dir}" />
+    </target>
+    <target name="-pre-compile">
+      <echo>-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</echo>
+      <echo>      AndroidAnnotations is generating code       </echo>
+      <echo>-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</echo>
+      <javac encoding="${java.encoding}"
+              source="${java.source}" target="${java.target}"
+              debug="true" extdirs="" includeantruntime="false"
+              destdir="${out.classes.absolute.dir}"
+              bootclasspathref="project.target.class.path"
+              verbose="${verbose}"
+              classpath="${extensible.classpath}"
+              classpathref="project.all.jars.path"
+              fork="${need.javac.fork}">
+          <src path="${source.absolute.dir}" />
+          <src path="${gen.absolute.dir}" />
+          <classpath>
+              <fileset dir="libs" includes="*.jar" />
+              <fileset dir="ext-libs" includes="*.jar" />
+          </classpath>
+          <compilerarg value="-proc:only" />
+          <compilerarg value="-processor" />
+          <compilerarg value="com.googlecode.androidannotations.AndroidAnnotationProcessor" />
+          <compilerarg value="-s" />
+          <compilerarg value="${apt_generated.dir}" />
+      </javac>
+      <echo>-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</echo>
+    </target>
+</project>

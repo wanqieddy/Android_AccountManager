@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_weight="3.5"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="@dimen/view_width"
+            android:layout_height="@dimen/view_height"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_exchange_selected" >
+        </View>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.5"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/account_info_margin_left"
+            android:layout_marginRight="@dimen/account_info_margin_right"
+            android:layout_weight="0.7"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/cloud_title"
+            android:textSize="@dimen/cloud_title_text_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/account_info_margin_left"
+            android:layout_marginRight="@dimen/account_info_margin_right"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="@string/cloud_info"
+            android:textColor="@color/account_info_color"
+            android:textSize="@dimen/cloud_info_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/account_margin"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7" />
+
+        <TextView
+            android:id="@+id/cloud_service"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/no_account"
+            android:gravity="center"
+            android:text="@string/start_service" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6" />
+    </LinearLayout>
+
+</LinearLayout>

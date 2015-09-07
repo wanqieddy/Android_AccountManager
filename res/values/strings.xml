@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="fx_account">Phicomm account</string>
+    <string name="login_fx_account">Login account</string>
+    <string name="has_account">Existing Account</string>
+    <string name="no_account">No Account</string>
+    <string name="login_account">Login</string>
+    <string name="user_name">Email/Phone/UserName/ID</string>
+    <string name="user_password">Login</string>
+    <string name="login_info">Login...</string>
+    <string name="login_error">Login failed,user name or password error!</string>
+    <string name="action_settings">Setting</string>
+    <string name="find_password">Find password?</string>
+    <string name="cloud_service">Phicomm CloudService</string>
+    <string name="sync_data">Sync Data</string>
+    <string name="user_info_more">User info</string>
+    <string name="Authentication">Authentication</string>
+    <string name="account_info">Phicomm account can be synchronized backup contacts, SMS, MMS and calendar data to the cloud</string>
+    <string name="warnning">Sorry\uff0conly one account exists in the device\uff01</string>
+    <string name="username">User name</string>
+    <string name="id">User ID</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="trueName">Name</string>
+    <string name="sex">Sex</string>
+    <string name="birth">Birth</string>
+    <string name="nickname">Nick name</string>
+    <string name="city">City</string>
+    <string name="exit">Exit account</string>
+    <string name="auth_password">input password</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="auth">Account :</string>
+    <string name="psdOrNameisNull">User name and password are not null!</string>
+    <string name="passwordIsNull">Password is not null!</string>
+    <string name="nameisNull">User name is not null!</string>
+    <string name="passwordIsWrong">Password is wrong!</string>
+    <string name="passwordFormatWrong">Password format is wrong</string>
+    <string name="exit_info">Exitting...</string>
+    <string name="action_register">Registration</string>
+    <string name="prompt">Prompt</string>
+    <string name="prompt_info">Unable to connect to the network, check the network or try again later!</string>
+    <string name="userNameIsWrong">User name is wrong!</string>
+    <string name="userNamePsdIsWrong">User name and Password are wrong!</string>
+    <string name="userNameFormatIsWrong">user name format is wrong!</string>
+    <string name="allFormatIsWrong">user name format and password format is wrong!</string>
+    <string name="add_account">add phicomm account</string>
+    <string name="cloud_title">Phicomm Cloud Service</string>
+    <string name="cloud_info">Provide contacts, SMS, MMS, calendar data backup and synchronization service</string>
+    <string name="start_service">start service</string>
+    <string name="isStringNull">Nothing</string>
+    <string name="isMale">Male</string>
+    <string name="isFemale">Female</string>
+    <string name="start">start sync data</string>
+    <string name="old_sync_time">Last sync time:</string>
+</resources>

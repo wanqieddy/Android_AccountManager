@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/auth_size_height"
+            android:gravity="left"
+            android:paddingLeft="@dimen/account_info_padding"
+            android:paddingTop="@dimen/account_info_padding"
+            android:textColor="@color/account_info_color"
+            android:textSize="@dimen/user_name_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/auth_password_height"
+            android:layout_margin="@dimen/auth_password_text_size"
+            android:layout_weight="6"
+            android:background="@drawable/exist_account"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/lock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/security" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/view_color" />
+
+            <EditText
+                android:id="@+id/auth_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:ems="10"
+                android:hint="@string/auth_password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/auth_password_text_color"
+                android:textSize="@dimen/auth_password_text_size" >
+
+                <requestFocus />
+            </EditText>
+
+            <ImageView
+                android:id="@+id/error"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/info_height"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/find_password_margin_right" />
+
+        <TextView
+            android:id="@+id/find_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/find_password_margin_right"
+            android:text="@string/find_password"
+            android:textColor="@color/find_password_text_color" />
+    </RelativeLayout>
+
+</LinearLayout>

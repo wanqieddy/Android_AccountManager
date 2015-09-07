@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/account_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/account_info_height"
+        android:gravity="left"
+        android:paddingLeft="@dimen/account_info_padding"
+        android:paddingTop="@dimen/account_info_padding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_account_height"
+        android:layout_margin="@dimen/login_account_margin"
+        android:background="@drawable/login_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_name_height"
+            android:layout_weight="6"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/user_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/icon_contact" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/divider" />
+
+            <com.phicomm.account.util.ClearEditText
+                android:id="@+id/username"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/login_account_margin"
+                android:layout_marginRight="@dimen/login_account_margin"
+                android:layout_weight="5"
+                android:background="@drawable/shape"
+                android:hint="@string/user_name"
+                android:inputType="text"
+                android:maxLength="40"
+                android:singleLine="true"
+                android:textColorHint="@color/account_info_color"
+                android:textSize="@dimen/user_name_text_size" >
+            </com.phicomm.account.util.ClearEditText>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_name_height"
+            android:layout_weight="6"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/password_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_cancle_lock_normal" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/divider" />
+
+            <com.phicomm.account.util.ClearEditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/login_account_margin"
+                android:layout_weight="4.4"
+                android:background="@drawable/shape"
+                android:hint="@string/user_password"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:textColorHint="@color/account_info_color"
+                android:textSize="@dimen/user_name_text_size" />
+
+            <View
+                android:id="@+id/eye"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/eye_height"
+                android:layout_marginRight="@dimen/login_account_margin"
+                android:layout_weight="0.6"
+                android:background="@drawable/hide" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_account_height"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/login_account_margin"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/account_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_name_height"
+            android:layout_margin="@dimen/login_account_margin"
+            android:background="@drawable/no_account"
+            android:gravity="center"
+            android:text="@string/login_account" />
+
+        <TextView
+            android:id="@+id/find_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/find_password_height"
+            android:layout_marginRight="@dimen/login_account_margin"
+            android:gravity="right"
+            android:text="@string/find_password"
+            android:textColor="@color/find_password_text_color" />
+    </LinearLayout>
+
+</LinearLayout>
